@@ -6,13 +6,19 @@
     <div class="ui page grid">
         <div class="row">
             <div class="column">
-                <h1>Layout</h1>
-                <div class="ui left menu">
-                    <a href="/fileGeneration" class="active item">
-                        <i class="download icon"></i>File Generation</a>
-                    <a href="/settings" class="item">
-                        <i class="settings icon"></i>Settings</a>
-                </div>
+                <h1 class="ui centered header">Autogiro file generation from Nexudus invoices</h1>
+                <nav class="ui menu">
+                    <div class="left menu">
+                        <a href="/fileGeneration" class="active item">
+                            <i class="download icon"></i>File Generation</a>
+                        <a href="/settings" class="item">
+                            <i class="settings icon"></i>Settings</a>
+                    </div>
+                    <div class="right menu">
+                        <a href="#" class="item">
+                            <i class="sign out icon"></i>Logout</a>
+                    </div>
+                </nav>
                 <div class="ui bottom attached segment">
                     {{> Template.dynamic template=main}}
                 </div>
