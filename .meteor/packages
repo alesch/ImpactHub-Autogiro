@@ -7,3 +7,8 @@
 meteor-platform
 autopublish
 insecure
+semantic:ui
+flemay:less-autoprefixer
+meteorhacks:flow-router
+meteorhacks:flow-layout
+reactive-var

@@ -1,0 +1,22 @@
+<head>
+    <title>Nexudus-Autogiro integration</title>
+</head>
+
+<template name="Layout">
+    <div class="ui page grid">
+        <div class="row">
+            <div class="column">
+                <h1>Layout</h1>
+                <div class="ui left menu">
+                    <a href="/fileGeneration" class="active item">
+                        <i class="download icon"></i>File Generation</a>
+                    <a href="/settings" class="item">
+                        <i class="settings icon"></i>Settings</a>
+                </div>
+                <div class="ui bottom attached segment">
+                    {{> Template.dynamic template=main}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
