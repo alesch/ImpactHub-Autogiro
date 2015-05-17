@@ -1,0 +1,28 @@
+<head>
+    <title>Nexudus-Autogiro integration</title>
+</head>
+<body>
+{{> Main }}
+</body>
+
+<template name="Main">
+    <div class="ui page grid">
+        <div class="row">
+            <div class="column">
+                <h1 class="ui centered header">Autogiro file generation from Nexudus invoices</h1>
+                <div class="ui top attached tabular menu">
+                    <a class="active item" data-tab="fileGeneration">
+                        <i class="download icon"></i>File Generation</a>
+                    <a class="item" data-tab="settings">
+                        <i class="settings icon"></i>Settings</a>
+                </div>
+                <div class="ui bottom attached active tab segment" data-tab="fileGeneration">
+                    {{> FileGeneration }}
+                </div>
+                <div class="ui bottom attached tab segment" data-tab="settings">
+                    {{> Settings }}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
