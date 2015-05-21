@@ -1,0 +1,13 @@
+{
+  "files": [
+    "*.js"
+  ],
+
+  "tests": [
+    "test/*.js"
+  ],
+
+  "env": {
+    "type": "node"
+  }
+}

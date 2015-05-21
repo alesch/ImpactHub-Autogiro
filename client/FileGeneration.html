@@ -1,3 +1,35 @@
 <template name="FileGeneration">
-    <h2>File generation</h2>
+    <div class="ui segment form">
+        <div class="inline field">
+            <label>Invoices created from</label>
+            <input id="invoiceFrom" name="from" type="date"
+                   value={{ thisMonth }} placeholder="yyyy-mm-dd">
+        </div>
+    </div>
+    <table class="ui table-hover compact table">
+        <thead>
+        <tr>
+            <th class="three wide center aligned">Coworker</th>
+            <th class="eight wide center aligned">Description</th>
+            <th class="one wide center aligned">Total (kr)</th>
+            <th class="two wide center aligned">Created</th>
+            <th class="two wide center aligned">Due</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each invoices}}
+            {{> Invoice}}
+        {{/each}}
+        </tbody>
+    </table>
+</template>
+
+<template name="Invoice">
+    <tr>
+        <td class="left aligned">{{ BillToName }}</td>
+        <td class="left aligned">{{ Description }}</td>
+        <td class="right aligned">{{ formatedTotal }}</td>
+        <td class="center aligned">{{ formattedCreatedOn }}</td>
+        <td class="center aligned">{{ formattedDueDate }}</td>
+    </tr>
 </template>
