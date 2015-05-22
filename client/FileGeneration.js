@@ -1,16 +1,28 @@
-Template.FileGeneration.onRendered(function () {
+Template.FileGeneration.onCreated(function () {
     this.filterDate = new ReactiveVar(moment().date(2));
 });
 
+function invoices (template) {
+    var date, invoices;
+    date = template.filterDate.get().toDate();
+    invoices = Invoices.find(
+        { CreatedOn : {$gte : date}}, {sort :{CreatedOn: 1}});
+    return invoices;
+}
+
+
 Template.FileGeneration.helpers({
     invoices : function () {
-        var date = Template.instance().filterDate.get();
-        return Invoices.find({ CreatedOn : {$gte : date}});
+        return invoices(Template.instance());
     }
     ,
     thisMonth : function () {
         var date = Template.instance().filterDate.get();
         return date.format('YYYY-MM-DD');
+    }
+    ,
+    invoiceCount : function () {
+        return invoices(Template.instance()).count();
     }
 });
 

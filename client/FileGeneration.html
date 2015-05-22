@@ -1,17 +1,26 @@
 <template name="FileGeneration">
-    <div class="ui segment form">
-        <div class="inline field">
-            <label>Invoices created from</label>
-            <input id="invoiceFrom" name="from" type="date"
-                   value={{ thisMonth }} placeholder="yyyy-mm-dd">
+    <div class="ui segment grid">
+        <div class="ten wide column form">
+            <div class="inline field">
+                <label class="ui label">{{ invoiceCount }}</label>
+                <label> invoices created from</label>
+                <input id="invoiceFrom" name="from" type="date"
+                       value={{ thisMonth }} placeholder="yyyy-mm-dd">
+            </div>
+        </div>
+        <div class="six wide column">
+            <div class="ui positive right labeled icon button">
+                <i class="right arrow icon"></i>
+                Generate Autogiro file
+            </div>
         </div>
     </div>
     <table class="ui table-hover compact table">
         <thead>
         <tr>
             <th class="three wide center aligned">Coworker</th>
-            <th class="eight wide center aligned">Description</th>
-            <th class="one wide center aligned">Total (kr)</th>
+            <th class="seven wide center aligned">Description</th>
+            <th class="two wide center aligned">Total (kr)</th>
             <th class="two wide center aligned">Created</th>
             <th class="two wide center aligned">Due</th>
         </tr>
