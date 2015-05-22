@@ -11,5 +11,5 @@ flemay:less-autoprefixer
 reactive-var
 standard-app-packages
 http
-numeral:numeral
 momentjs:moment
+underscorestring:underscore.string

@@ -35,8 +35,7 @@ Template.FileGeneration.events({
 
 Template.Invoice.helpers({
     formatedTotal : function () {
-        numeral.language('sv');
-        return numeral(this.TotalAmount).format('0,000')
+        return s.numberFormat(this.TotalAmount,0,',','.');
     }
     ,
     formattedCreatedOn: function () {

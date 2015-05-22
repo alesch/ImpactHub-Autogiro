@@ -29,7 +29,6 @@ minimongo@1.0.8
 mobile-status-bar@1.0.3
 momentjs:moment@2.10.3
 mongo@1.1.0
-numeral:numeral@1.5.3
 observe-sequence@1.0.6
 ordered-dict@1.0.3
 random@1.0.3
@@ -48,6 +47,7 @@ templating@1.1.1
 tracker@1.0.7
 ui@1.0.6
 underscore@1.0.3
+underscorestring:underscore.string@3.0.3_1
 url@1.0.4
 webapp@1.2.0
 webapp-hashing@1.0.3
