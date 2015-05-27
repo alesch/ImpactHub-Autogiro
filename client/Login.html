@@ -1,7 +1,7 @@
 <template name="Login">
     <div class="ui row"></div>
     <div class="eight wide centered column">
-        <form class="ui raised compact segment form">
+        <div class="ui raised compact segment form">
             <h2 class="ui dividing header">Nexudus spaces login</h2>
 
             <div class="two fields">
@@ -11,13 +11,13 @@
                 </div>
                 <div class="required field">
                     <label>Password</label>
-                    <input name="password" type="text" placeholder="mysupersecret">
+                    <input name="password" type="password" placeholder="mysupersecret">
                 </div>
             </div>
-                <button id="LoginButton" class="ui positive right labeled icon submit button">
+                <button id="LoginButton" type="submit" class="ui positive right labeled icon submit button">
                     <i class="right arrow icon"></i>
                     Login
                 </button>
-        </form>
+        </div>
     </div>
 </template>
