@@ -13,3 +13,6 @@ standard-app-packages
 http
 momentjs:moment
 underscorestring:underscore.string
+jparker:crypto-hmac
+jparker:crypto-sha256
+meteortoys:allthings

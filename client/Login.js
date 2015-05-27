@@ -22,6 +22,7 @@ Template.Login.events({
             password: $('input[name="password"]').val()
         };
         Session.set('user', credentials);
+        Meteor.call('nexudusLogin', credentials);
         return false;
     }
 });
